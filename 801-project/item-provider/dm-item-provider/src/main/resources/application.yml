@@ -1,0 +1,17 @@
+server:
+  port: 7021
+spring:
+  application:
+    name: dm-item-provider
+  datasource:
+    url: jdbc:mysql://item2.local.com:3306/dm_item?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+moduleName: dm-item-provider
+eureka:
+  client:
+    service-url:
+       defaultZone: http://root:123456@localhost:7776/eureka/
